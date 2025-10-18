@@ -1,5 +1,5 @@
 <p align="center">
-<img src="imagenes/lamp.png">
+<img src="../assets/imagenes/lamp.png">
 </p>
 
 # Contenido
@@ -15,7 +15,7 @@ sudo apt install apache2 php8.4
 ```
 Ahora vamos a [http://localhost](http://localhost)
 
-![Página por defecto](imagenes/apache2-default.png)
+![Página por defecto](../assets/imagenes/apache2-default.png)
 
 La carpeta **html** utilizada por Apache en Debian en **/var/www/html**
 
@@ -29,7 +29,7 @@ phpinfo();
 
 Ahora vamos a [http://localhost/info.php](http://localhost/info.php)
 
-![Resultado de phpinfo()](imagenes/phpinfo.png)
+![Resultado de phpinfo()](../assets/imagenes/phpinfo.png)
 
 Si queremos instalar MariaDB y phpmyadmin
 ```bash
@@ -51,9 +51,9 @@ Cambiamos la contraseña dentro de la base de datos para root:
 ```sql
 SET PASSWORD FOR root@localhost = PASSWORD('new_password');
 ```
-![Login PhpMyAdmin](imagenes/login-phpmyadmin.png)
+![Login PhpMyAdmin](../assets/imagenes/login-phpmyadmin.png)
 
-![PhpMyAdmin](imagenes/phpmyadmin.png)
+![PhpMyAdmin](../assets/imagenes/phpmyadmin.png)
 
 [Ver blog](https://blog.williamdes.eu/Debian/tutorials/how-to-install-phpmyadmin-on-debian-13-trixie/)
 
