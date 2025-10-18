@@ -1,7 +1,13 @@
 <p align="center">
 <img src="imagenes/logo.png">
 </p>
-# Instalación de stack a través de paquetería
+
+# Contenido
+- [Instalación de stack LAMP a través de paquetería](#instalación-de-stack-lamp-a-través-de-paquetería)
+- [LAMP usando Docker](#lamp-usando-docker)
+- [Servidor web ligero integrado en PHP](#servidor-integrado-de-php)
+
+# Instalación de stack LAMP a través de paquetería
 
 ```bash
 sudo apt install apache2 php8.4
@@ -78,7 +84,6 @@ phpinfo();
 ?>
 ```
 
-
 ℹ️ **Información**: Tenemos que ajustar el puerto y el nombre del contenedor
 
 ## Apache + PHP + MySQL + Adminer
@@ -107,12 +112,9 @@ services:
 
 Las credenciales para poder accceder a MariaDB sería usuario **root** y password **example**. El password puede cambiarse en el fichero. La interfaz de Adminer sería accesible en el puerto **8080**, y también puede cambiarse.
 
-# Servidor integrado de PHP
-¡Claro! El servidor web integrado de PHP es una herramienta **muy útil para desarrollo local**, especialmente en el módulo de **Implantación de Aplicaciones Web (IAW)** de ASIR. Permite probar aplicaciones PHP **sin necesidad de instalar Apache, Nginx ni configurar un entorno LAMP completo**.
-
 ---
 
-## 🚀 ¿Qué es `php -S`?
+# Servidor web ligero integrado en PHP
 
 Es un **servidor web ligero integrado en PHP** (disponible desde PHP 5.4).  
 La `-S` viene de **"Server"**.
