@@ -4,6 +4,7 @@
 
 # Contenido
 - [Instalación de stack LAMP a través de paquetería](#instalación-de-stack-lamp-a-través-de-paquetería)
+- [Instalación XAMPP en Windows](#instalación-xampp-en-windows)
 - [LAMP usando Docker](#lamp-usando-docker)
 - [Servidor web ligero integrado en PHP](#servidor-integrado-de-php)
 
@@ -55,6 +56,7 @@ SET PASSWORD FOR root@localhost = PASSWORD('new_password');
 ![PhpMyAdmin](imagenes/phpmyadmin.png)
 
 [Ver blog](https://blog.williamdes.eu/Debian/tutorials/how-to-install-phpmyadmin-on-debian-13-trixie/)
+
 # Instalación XAMPP en Windows
 
 - Descargamos XAMPP para Windows: [Enlace](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe/download)
