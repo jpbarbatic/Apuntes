@@ -62,7 +62,7 @@ SET PASSWORD FOR root@localhost = PASSWORD('new_password');
 - Descargamos XAMPP para Windows: [Enlace](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe/download)
 - Instalamos en C:\
 - Iniciamos en servicio desde el Panel de Control de XAMPP
-- Accedemos a (http://localhost)[http://localhost]
+- Accedemos a [http://localhost](http://localhost)
 
 La carpeta que utiliza XAMPP para guardar los ficheros es **c:\xampp\htdocs**
 
@@ -93,23 +93,30 @@ phpinfo();
 Para poder usar MySQL (MariaDB) y Adminer como GUI para acceder a la base de datos vía web la forma más cómoda sería usando Docker Compose. El fichero **docker-compose.yml** sería:
 
 ```yaml
-version: '3.1'
+   version: '3.1'
 
-services:
+   services:
 
-  db:
-    image: mariadb
-    restart: always
-    ports:
-      - 3306:3306
-    environment:
-      MARIADB_ROOT_PASSWORD: example
+   apache-php:
+      image: php:8.2-apache
+      restart: always
+      ports:
+         - 8080:80
+      volumes:
+         - ${PWD}/html:/var/www/html
+   db:
+      image: mariadb
+      restart: always
+      ports:
+         - 3306:3306
+      environment:
+         MARIADB_ROOT_PASSWORD: example
 
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8081:8080
+   adminer:
+      image: adminer
+      restart: always
+      ports:
+         - 8081:8080
 ```
 
 Las credenciales para poder accceder a MariaDB sería usuario **root** y password **example**. El password puede cambiarse en el fichero. La interfaz de Adminer sería accesible en el puerto **8080**, y también puede cambiarse.
